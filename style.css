@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    body {
+    background-image:
+    url("./images/bg-pattern-top-mobile.svg"),
+    url("./images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position:
+        top left,
+        bottom right;
+        min-height: 100vh;
+        font-family: League Spartan;
+}
+/*contenedor principal*/
+
+.container-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5.5rem 1.5rem;
+    
+}
+/* contenido principal*/
+.main-content{
+    text-align: center; 
+    color: hsl(300, 43%, 22%);
+    margin-bottom: 2rem;
+    
+}
+.title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.description{
+    font-size: 1rem;
+    line-height: 1.5;
+    color: hsl(300, 43%, 22%);
+}
+
+/* contenido de raked*/
+
+.main-raked{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+.container-start{
+    display: flex;
+    gap: 8px;
+}
+.raked-item{
+    background-color:  hsl(300, 24%, 96%);
+    padding: 20px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 250px;
+    gap: 10px;
+    color: hsl(300, 43%, 22%);
+    font-weight: bold
+}
+
+.container-testimonial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.testimonial{
+    background-color: hsl(300, 43%, 22%);
+    color: white;
+    border-radius: 10px;
+    padding: 1.9rem;
+}
+
+.testimonial-profile{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 5px auto 25px auto;
+
+}
+.testimonial-profile img{
+    border-radius: 50%;
+    width: 40px;
+    
+}
+.profile{
+    
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.profile-status{
+
+    color: hsl(333, 80%, 67%);  
+}
+.testimonial-text{
+    font-size: 16px;
+    line-height: 1.5;
+    
+}
+@media screen and (min-width: 1100px){
+    body {
+    background-image:
+        url("./images/bg-pattern-top-desktop.svg"),
+        url("./images/bg-pattern-bottom-desktop.svg");
+
+    background-repeat: no-repeat, no-repeat;
+
+    background-position:
+        top -50px left,
+        bottom right;
+    }
+
+    .container-main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 30px;
+        min-width: 1100px;
+    }
+
+
+    .main-content{
+        text-align: left;
+        max-width: 380px;
+        margin-right: 5rem;
+    }
+    .title{
+        font-size: 2.5rem;
+        margin: auto 100px  1rem 0;
+    }
+
+    .main-raked{
+        max-width: 500px;
+        margin-top: 60px;
+        flex: 2;
+    }
+
+    .raked-item{
+        width: 380px;
+        flex-direction: row;
+    }
+    
+    /* El primer item se queda a la izquierda (o donde decidas) */
+    .raked-item:nth-child(1) {
+        align-self: flex-start;
+    }
+
+    /* El segundo item se mueve un poco a la derecha */
+    .raked-item:nth-child(2) {
+        align-self: center;
+    }
+
+    /* El tercer item se mueve todo a la derecha */
+    .raked-item:nth-child(3) {
+        align-self: flex-end;
+    }
+    
+    
+    .container-testimonial{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: start;
+        gap: 2rem;
+    }
+    .testimonial{
+        width: 300px;
+    }
+
+    .testimonial:nth-child(2){
+        margin-top: 40px;
+    }
+
+    .testimonial:nth-child(3){
+        margin-top: 80px;
+    }
+
+}
+
+
